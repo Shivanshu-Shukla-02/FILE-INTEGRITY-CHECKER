@@ -47,11 +47,10 @@ Users had the option to either save the results to a file or display them in the
 
 
 **OUTOUT**: 
-$ python file_monitor.py
+python file-monitor.py
 Enter the directory to monitor: ./monitor_directory
-Monitoring changes in: ./monitor_directory
-Press Ctrl+C to stop.
-(No changes detected)
+Monitring changes in: ./monitor_directory
+
 
 
 
