@@ -74,4 +74,12 @@ Real-Time Monitoring: Implemented periodic checks using time.sleep() for real-ti
 Customizable Algorithms: Allowed users to select between hash algorithms (e.g., MD5, SHA-1, SHA-256).
 Output Options: Users could choose to log results to a file or the console.
 
+**OUTOUT**: 
+$ python file_monitor.py
+Enter the directory to monitor: ./monitor_directory
+Monitoring changes in: ./monitor_directory
+Press Ctrl+C to stop.
+(No changes detected)
+
+
 
