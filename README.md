@@ -15,64 +15,36 @@
 # ENTER DESCRIPTION OF TASK PERFORMED NOT LESS THAN 500 WORDS
 
 
-The task involved designing and implementing a Python-based tool to monitor file changes by calculating and comparing cryptographic hash values. This tool is essential for ensuring file integrity, detecting unauthorized modifications, and maintaining security in file systems. Using Python's hashlib library as the core for hash generation, the script systematically tracks files in a specified directory, logging any detected changes.
+The assignment required creating and deploying a Python-based tool that could track file modifications by calculating and comparing cryptographic hash values. This tool is crucial for guaranteeing file integrity, identifying unauthorized changes, and upholding security in file systems. By utilizing python's hashlib library as the foundation for hash generation, the script systematically monitors files within a designated directory, recording any detected alterations.
 
-Task Goals
-Ensure File Integrity:
-By comparing hash values over time, the tool provides a mechanism to verify whether files have been altered, added, or deleted.
-Automated Monitoring:
-The script automates the process of file scanning, eliminating the need for manual checks.
-Real-Time Alerts:
-Provide immediate notifications for changes, ensuring rapid responses to unauthorized activities.
-Steps Taken to Develop the Tool
-1. Requirements Analysis:
-The first step was identifying the requirements for the tool:
+Task goals guarantee file integrity: by comparing hash values over time, the tool offers a way to verify if files have been modified, added, or removed. Automated monitoring: the script automates the process of file scanning, eliminating the need for manual checks. Real-time alerts: offer instant notifications for alterations, guaranteeing swift responses to unauthorized actions. The process of creating the tool involved several steps.
 
-It should compute hash values for each file in a directory.
-Allow users to specify directories for monitoring.
-Detect and classify changes into modified, added, or deleted files.
-Provide clear logs or reports of detected changes.
-2. Selection of Tools and Libraries:
-Python was chosen for its versatility and rich library ecosystem. The primary libraries used were:
+The assignment required creating and deploying a Python-based tool that could track file modifications by calculating and comparing cryptographic hash values. This tool is crucial for guaranteeing file integrity, identifying unauthorized changes, and upholding security in file systems. By utilizing python's hashlib library as the foundation for hash generation, the script systematically monitors files within a designated directory, recording any detected alterations.
 
-hashlib: For generating cryptographic hash values such as SHA-256.
-os and os.path: For directory traversal and file operations.
-pickle or json: For storing and retrieving hash data persistently.
-3. Tool Design and Architecture:
-The script was structured to be modular, with the following core functionalities:
+Task goals guarantee file integrity: by comparing hash values over time, the tool offers a way to verify if files have been modified, added, or removed. Automated monitoring: the script automates the process of file scanning, eliminating the need for manual checks. Real-time alerts: offer instant notifications for alterations, guaranteeing swift responses to unauthorized actions. The process of creating the tool involved several steps.
 
-Hash Generation: Using hashlib, the tool generates hash values for files. SHA-256 was chosen for its strong collision resistance.
-Data Persistence: The tool saves hash values to a local file (e.g., hash_data.json) for later comparison.
-Change Detection: By comparing the current hashes with stored values, the script categorizes changes into:
-Modified Files: Files with differing hash values.
-Added Files: New files not present in the stored hash data.
-Deleted Files: Files missing from the directory but present in the stored data.
-Logging and Reporting: Changes are logged to the console and optionally saved to a report file.
-4. Implementation:
-The script was implemented in Python. Below are the key steps performed in the implementation:
+4: Implementation:: The code was written in Python.
+The following are the essential steps involved in the execution of the plan: Recursive directory scanning: The tool navigates the directory structure using os. Walk(), guaranteeing that all files, including those in subdirectories, are monitored.
+Hash calculation:
+The hash value for each file is determined by reading it in binary mode and passing its content to the hashlib. Sha256() function.
+Data retention:
+The hash values, in addition to file paths, are saved in a JSON file for future use.
+Change detection logic:
+In subsequent runs, the script compares the newly calculated hashes with the stored ones, identifying any modifications and updating the hash file accordingly.
+User engagement:
+The tool provides a straightforward command-line interface (cli) that allows users to specify the directory and initiate the monitoring process.
 
-Recursive Directory Scanning:
-The tool traverses the directory tree using os.walk(), ensuring all files, including those in subdirectories, are monitored.
-Hash Calculation:
-A hash value is computed for each file by reading it in binary mode and feeding its content to the hashlib.sha256() function.
-Data Storage:
-The hash values, along with file paths, are stored in a JSON file for future reference.
-Change Detection Logic:
-On subsequent runs, the script compares the newly calculated hashes against the stored ones, detecting any changes and updating the hash file accordingly.
-User Interaction:
-The tool offers a simple command-line interface (CLI) for specifying the directory and running the monitoring process.
-5. Testing:
-The tool was tested extensively to ensure reliability. Different scenarios were simulated:
+5: Testing::
+The tool underwent rigorous testing to guarantee its dependability.
+Various situations were modeled: Editing a document's data.
+Incorporating fresh files into the directory.
+Removing previously created files. Each test accurately identified the alterations and produced the necessary logs.
 
-Modifying a file's content.
-Adding new files to the directory.
-Deleting existing files. Each test successfully detected the changes and generated the appropriate logs.
-6. Enhancements:
-After basic functionality was achieved, the following enhancements were added:
 
-Real-Time Monitoring: Implemented periodic checks using time.sleep() for real-time file tracking.
-Customizable Algorithms: Allowed users to select between hash algorithms (e.g., MD5, SHA-1, SHA-256).
-Output Options: Users could choose to log results to a file or the console.
+6: Enhancements:: Once the basic functionality was established, the following enhancements were implemented: Real-time monitoring: implemented periodic checks using time. Sleep() for real-time file tracking.
+Customizable algorithms: enabled users to choose from a variety of hash algorithms, such as md5, sha-1, and sha-256.
+Users had the option to either save the results to a file or display them in the console.
+
 
 **OUTOUT**: 
 $ python file_monitor.py
